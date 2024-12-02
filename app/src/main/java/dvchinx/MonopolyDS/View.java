@@ -23,10 +23,12 @@ public class View extends javax.swing.JFrame {
 
         pBackground = new javax.swing.JPanel();
         pHeader = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        txtMin = new javax.swing.JLabel();
+        txtExit = new javax.swing.JLabel();
+        txtTitle = new javax.swing.JLabel();
+        txtWatermark = new javax.swing.JLabel();
+        txtNPlayers = new javax.swing.JLabel();
+        entNPlayers = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -46,31 +48,31 @@ public class View extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("-");
-        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+        txtMin.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 18)); // NOI18N
+        txtMin.setForeground(new java.awt.Color(0, 0, 0));
+        txtMin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        txtMin.setText("-");
+        txtMin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        txtMin.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel1MouseClicked(evt);
+                txtMinMouseClicked(evt);
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("X");
-        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+        txtExit.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
+        txtExit.setForeground(new java.awt.Color(0, 0, 0));
+        txtExit.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        txtExit.setText("X");
+        txtExit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        txtExit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel2MouseClicked(evt);
+                txtExitMouseClicked(evt);
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Microsoft YaHei Light", 1, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("Monopoly - Data Science");
+        txtTitle.setFont(new java.awt.Font("Microsoft YaHei Light", 1, 14)); // NOI18N
+        txtTitle.setForeground(new java.awt.Color(0, 0, 0));
+        txtTitle.setText("Monopoly - Data Science");
 
         javax.swing.GroupLayout pHeaderLayout = new javax.swing.GroupLayout(pHeader);
         pHeader.setLayout(pHeaderLayout);
@@ -78,26 +80,30 @@ public class View extends javax.swing.JFrame {
             pHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pHeaderLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 257, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtMin, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(7, 7, 7)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtExit, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         pHeaderLayout.setVerticalGroup(
             pHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(txtExit, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(pHeaderLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+                .addComponent(txtTitle, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
                 .addContainerGap())
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(txtMin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jLabel4.setFont(new java.awt.Font("Microsoft YaHei Light", 2, 12)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel4.setText("by dvchinx");
+        txtWatermark.setFont(new java.awt.Font("Microsoft YaHei Light", 2, 12)); // NOI18N
+        txtWatermark.setForeground(new java.awt.Color(51, 51, 51));
+        txtWatermark.setText("by dvchinx");
+
+        txtNPlayers.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
+        txtNPlayers.setForeground(new java.awt.Color(0, 0, 0));
+        txtNPlayers.setText("Número de Jugadores: ");
 
         javax.swing.GroupLayout pBackgroundLayout = new javax.swing.GroupLayout(pBackground);
         pBackground.setLayout(pBackgroundLayout);
@@ -106,15 +112,25 @@ public class View extends javax.swing.JFrame {
             .addComponent(pHeader, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pBackgroundLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtWatermark, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
+            .addGroup(pBackgroundLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(txtNPlayers)
+                .addGap(40, 40, 40)
+                .addComponent(entNPlayers, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pBackgroundLayout.setVerticalGroup(
             pBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pBackgroundLayout.createSequentialGroup()
                 .addComponent(pHeader, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 338, Short.MAX_VALUE)
-                .addComponent(jLabel4)
+                .addGap(28, 28, 28)
+                .addGroup(pBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtNPlayers)
+                    .addComponent(entNPlayers, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 288, Short.MAX_VALUE)
+                .addComponent(txtWatermark)
                 .addContainerGap())
         );
 
@@ -132,9 +148,9 @@ public class View extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+    private void txtMinMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtMinMouseClicked
         this.setExtendedState(1);
-    }//GEN-LAST:event_jLabel1MouseClicked
+    }//GEN-LAST:event_txtMinMouseClicked
 
     private void pHeaderMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pHeaderMousePressed
         this.xMouse = evt.getX();
@@ -148,16 +164,18 @@ public class View extends javax.swing.JFrame {
         this.setLocation(x - xMouse, y - yMouse);
     }//GEN-LAST:event_pHeaderMouseDragged
 
-    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+    private void txtExitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtExitMouseClicked
         System.exit(0);
-    }//GEN-LAST:event_jLabel2MouseClicked
+    }//GEN-LAST:event_txtExitMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JTextField entNPlayers;
     private javax.swing.JPanel pBackground;
     private javax.swing.JPanel pHeader;
+    private javax.swing.JLabel txtExit;
+    private javax.swing.JLabel txtMin;
+    private javax.swing.JLabel txtNPlayers;
+    private javax.swing.JLabel txtTitle;
+    private javax.swing.JLabel txtWatermark;
     // End of variables declaration//GEN-END:variables
 }
