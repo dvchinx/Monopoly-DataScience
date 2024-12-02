@@ -2,6 +2,9 @@
 
 **Monopoly-DataScience** es un proyecto desarrollado en **Java** que utiliza **Gradle** como herramienta de construcción y **Java Swing** para mostrar una interfaz gráfica interactiva. Este proyecto permite analizar y estudiar diferentes casos del juego de mesa **Monopoly**, proporcionando herramientas visuales y estadísticas para mejorar la comprensión y el análisis estratégico del juego.
 
+- [Reglas del Monopoly por Hasbro](https://www.hasbro.com/common/instruct/Monopoly%28Spanish%29.pdf)
+- [Imagen del Tablero de Referencia](https://co.pinterest.com/pin/516225176041598654/)
+
 ## 🚀 Características principales
 
 - **Interfaz gráfica con Java Swing**: Diseñada para ser fácil de usar y atractiva visualmente.
